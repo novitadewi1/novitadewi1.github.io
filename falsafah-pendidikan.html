@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ki Hajar Dewantara</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Latar Belakang</a></li>
+                <li><a href="/perjuangan.html">Perjuangan</a></li>
+                <li><a href="/falsafah-pendidikan.html">Falsafah</a></li>
+                <li><a href="/pengaruh-warisan.html">Warisan</a></li>
+                <li><a href="/kesimpulan.html">Kesimpulan</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Ki Hajar Dewantara</h1>
+            <p>Bapak Pendidikan Indonesia yang memperjuangkan hak pendidikan bagi seluruh rakyat Indonesia tanpa
+                memandang status sosial dan ekonomi.</p>
+            <a href="#falsafah" class="cta-btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- Falsafah Section -->
+    <section id="falsafah">
+        <div class="container">
+            <h2>Falsafah Pendidikan</h2>
+
+            
+            <p>Salah satu kontribusi paling penting Ki Hajar Dewantara adalah pengembangan filosofi pendidikan yang dikenal sebagai “Taman Siswa”. Konsep ini menggambarkan sekolah sebagai taman, tempat di mana anak-anak diberi kesempatan untuk tumbuh dan berkembang sesuai dengan potensi mereka masing-masing. Ia juga menekankan pentingnya pendidikan yang holistik, yang tidak hanya mencakup aspek akademis tetapi juga aspek moral, sosial, dan keterampilan praktis.</p>
+
+            <div class="principle-card">
+                <h3>Ing Ngarso Sung Tulodo</h3>
+                <p>Di depan, menjadi teladan. Seorang pendidik harus mampu menjadi contoh yang baik bagi murid-muridnya
+                    dalam sikap dan perilaku.</p>
+            </div>
+
+            <div class="principle-card">
+                <h3>Ing Madyo Mangun Karso</h3>
+                <p>Di tengah, membangun semangat. Sebagai pendidik, harus mampu memberi motivasi dan dorongan pada
+                    murid-muridnya.</p>
+            </div>
+
+            <div class="principle-card">
+                <h3>Tut Wuri Handayani</h3>
+                <p>Dari belakang, memberi dorongan. Pendidik harus memberikan kesempatan pada murid untuk berkembang
+                    mandiri dengan arahan yang tepat.</p>
+            </div>
+
+            <p>Ia juga menekankan pentingnya pendidikan yang holistik, yang tidak hanya mencakup aspek akademis tetapi
+                juga aspek moral, sosial, dan keterampilan praktis. Pendidikan menurut Ki Hajar Dewantara harus
+                memperhatikan kodrat alam dan kemerdekaan anak untuk berkembang sesuai dengan potensinya.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</h3>
+            <p>"Pendidikan adalah daya upaya untuk memajukan budi pekerti, pikiran, dan jasmani anak, agar selaras
+                dengan alam dan masyarakatnya."</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 dayugifa</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ki Hajar Dewantara</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Latar Belakang</a></li>
+                <li><a href="/perjuangan.html">Perjuangan</a></li>
+                <li><a href="/falsafah-pendidikan.html">Falsafah</a></li>
+                <li><a href="/pengaruh-warisan.html">Warisan</a></li>
+                <li><a href="/kesimpulan.html">Kesimpulan</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Ki Hajar Dewantara</h1>
+            <p>Bapak Pendidikan Indonesia yang memperjuangkan hak pendidikan bagi seluruh rakyat Indonesia tanpa
+                memandang status sosial dan ekonomi.</p>
+            <a href="#warisan" class="cta-btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- Warisan Section -->
+    <section id="warisan">
+        <div class="container">
+            <h2>Pengaruh Dan Warisan</h2>
+            <p>Ki Hajar Dewantara meninggalkan warisan yang abadi dalam sejarah pendidikan Indonesia. Usahanya dalam memperjuangkan hak pendidikan bagi semua lapisan masyarakat telah membuka pintu akses pendidikan bagi jutaan anak Indonesia. Filosofi dan nilai-nilai pendidikan yang ia anut masih menjadi landasan dalam pengembangan sistem pendidikan di Indonesia hingga saat ini.</p>
+
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>1889</h3>
+                        <p>Lahir dengan nama Raden Mas Soewardi Soerjaningrat di Yogyakarta</p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>1922</h3>
+                        <p>Mendirikan Perguruan Taman Siswa di Yogyakarta</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>1928</h3>
+                        <p>Mengubah namanya menjadi Ki Hajar Dewantara</p>
+                    </div>
+                </div>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3>1945-1959</h3>
+                        <p>Menjadi Menteri Pendidikan pertama Republik Indonesia</p>
+                    </div>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3>1959</h3>
+                        <p>Wafat di Yogyakarta pada usia 70 tahun</p>
+                    </div>
+                </div>
+            </div>
+
+            <p>Filosofi dan nilai-nilai pendidikan yang ia anut masih menjadi landasan dalam pengembangan sistem
+                pendidikan di Indonesia hingga saat ini. Tanggal kelahirannya, 2 Mei, diperingati sebagai Hari
+                Pendidikan Nasional di Indonesia, sebagai bentuk penghargaan atas jasanya yang besar dalam perkembangan
+                pendidikan di Indonesia.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</h3>
+            <p>"Pendidikan adalah daya upaya untuk memajukan budi pekerti, pikiran, dan jasmani anak, agar selaras
+                dengan alam dan masyarakatnya."</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 dayugifa</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

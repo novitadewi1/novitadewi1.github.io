@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ki Hajar Dewantara</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Latar Belakang</a></li>
+                <li><a href="/perjuangan.html">Perjuangan</a></li>
+                <li><a href="/falsafah-pendidikan.html">Falsafah</a></li>
+                <li><a href="/pengaruh-warisan.html">Warisan</a></li>
+                <li><a href="/kesimpulan.html">Kesimpulan</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Ki Hajar Dewantara</h1>
+            <p>Bapak Pendidikan Indonesia yang memperjuangkan hak pendidikan bagi seluruh rakyat Indonesia tanpa memandang status sosial dan ekonomi.</p>
+            <a href="#perjuangan" class="cta-btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- Perjuangan Section -->
+    <section id="perjuangan">
+        <div class="container">
+            <h2>Perjuangan Dan Kontribusi</h2>
+            <div class="section-grid">
+                <div class="img-container">
+                    <img src="https://asset.kompas.com/crops/KlRWg-gHjf2PPjC3b1CdPXJJdkA=/0x106:1000x606/780x390/data/photo/2022/03/29/624233d209bfc.jpg" alt="Taman Siswa">
+                </div>
+                <div>
+                    <p>Setelah kembali ke Indonesia, Ki Hajar Dewantara menjadi sangat aktif dalam memperjuangkan hak-hak pendidikan bagi rakyat Indonesia, terutama untuk golongan pribumi. Pada tahun 1912, ia mendirikan sekolah Taman Siswa, yang bertujuan memberikan pendidikan kepada semua anak Indonesia tanpa memandang status sosial atau ekonomi mereka. Pendekatan pendidikan yang diusungnya menekankan pada kebebasan belajar, kreativitas, dan patriotisme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ki Hajar Dewantara - Bapak Pendidikan Indonesia</h3>
+            <p>"Pendidikan adalah daya upaya untuk memajukan budi pekerti, pikiran, dan jasmani anak, agar selaras dengan alam dan masyarakatnya."</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 dayugifa</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
